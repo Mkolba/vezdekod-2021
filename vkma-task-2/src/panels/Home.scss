@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+.vkui__root {
+    --font-common: 'Montserrat', sans-serif !important;
+}
+
+.Header {
+    margin: 24px 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    font-weight: 500;
+    font-size: 32px;
+
+    .Subheader {
+        margin-top: 6px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.Members__Wrapper {
+    .vkuiHeader__main {
+        overflow: visible;
+        height: 26px;
+
+        .vkuiHeader__content-base {
+            overflow: visible;
+            font-size: 16px;
+        }
+    }
+}
+
+.Members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .MemberCard {
+        margin-bottom: 24px;
+        max-width: 180px;
+        overflow: hidden;
+
+        .Content__Wrapper {
+            padding: 12px 24px;
+        }
+
+        .Content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            .Avatar {
+                margin-bottom: 16px;
+            }
+
+            .Name {
+                font-weight: 500;
+            }
+
+            .Skills {
+                padding-top: 8px;
+                font-size: 14px;
+                opacity: .7;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .Members__Wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .vkuiHeader__main .vkuiHeader__content-base {
+            overflow: visible;
+            color: var(--text_primary);
+            height: 24px;
+            font-size: 24px;
+        }
+
+        .Members {
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            min-width: calc(180px*4 + 20px*4);
+            max-width: calc(180px*4 + 40px*4);
+        }
+    }
+}
