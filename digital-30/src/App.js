@@ -43,7 +43,7 @@ export default class App extends React.Component {
     handleButton = (index, onDown) => {
         let keys = this.state.keys;
         if (onDown && !keys[index]['pressed']) {
-            let audio = new Audio(`https://host.adawhite.ru/digital-3/notes/Piano.ff.${keys[index]['note']}.mp3`);
+            let audio = new Audio(`https://host.adawhite.ru/static/notes/Piano.ff.${keys[index]['note']}.mp3`);
 
             audio.addEventListener('loadeddata', function() {
                 audio.play();
