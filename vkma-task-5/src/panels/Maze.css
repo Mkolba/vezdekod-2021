@@ -7,7 +7,7 @@
 }
 
 .Maze {
-    border: 2px solid black;
+    border: 2px solid var(--text_primary);
     table-layout: fixed;
     max-width: calc(48*7px);
 }
@@ -18,7 +18,7 @@
 }
 
 .item-barrier {
-    background: black;
+    background: var(--text_primary);
 }
 
 .item-endpoint {

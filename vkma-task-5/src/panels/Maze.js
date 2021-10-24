@@ -6,10 +6,6 @@ import './Maze.css';
 
 
 class Maze extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<table className={'Maze'} ref={this.props.ref_}>
@@ -157,6 +153,9 @@ export default class MazePanel extends React.Component {
 				<div className={'Wrapper'}>
 					<Header>Лабиринт «Бессоная ночь»</Header>
 					<Maze maze={maze} ref_={this.state.mazeRef}/>
+					{!bridge.supports("VKWebAppDeviceMotionStart") &&
+						<div style={{color: 'red'}}>Гироскоп не поддерживается!</div>
+					}
 				</div>
 
 				{this.state.snackbar}
