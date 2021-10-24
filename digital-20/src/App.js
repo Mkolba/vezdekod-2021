@@ -61,6 +61,7 @@ export default class App extends React.Component {
                 <div className={'Piano'}>
                     {this.state.keys.map((item, i) => (
                         <div className={`Key Key-${item.type}` + (item.pressed ? ' Key-pressed  ' : '')} key={item.key}
+                         onMouseLeave={() => this.handleButton(i, false)}
                          onMouseDown={() => this.handleButton(i, true)}
                          onMouseUp={() => this.handleButton(i, false)}
                         >

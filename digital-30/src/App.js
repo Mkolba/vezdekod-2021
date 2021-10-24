@@ -35,6 +35,9 @@ export default class App extends React.Component {
     componentDidMount() {
         window.onkeydown = (event) => this.handleKeyboard(event, true);
         window.onkeyup = (event) => this.handleKeyboard(event, false);
+        this.state.keys.forEach(item => {
+            new Audio(`https://host.adawhite.ru/static/notes/Piano.ff.${item.note}.mp3`);
+        })
     }
 
     handleButton = (index, onDown) => {
@@ -67,6 +70,7 @@ export default class App extends React.Component {
                 <div className={'Piano'}>
                     {this.state.keys.map((item, i) => (
                         <div className={`Key Key-${item.type}` + (item.pressed ? ' Key-pressed  ' : '')} key={item.key}
+                         onMouseLeave={() => this.handleButton(i, false)}
                          onMouseDown={() => this.handleButton(i, true)}
                          onMouseUp={() => this.handleButton(i, false)}
                         >
