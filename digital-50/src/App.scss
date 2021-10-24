@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.App {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    .Piano {
+        width: calc(48px*14);
+        box-shadow: 0 0 0 1.5px black;
+        border-radius: 0 0 6px 6px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        overflow: hidden;
+
+
+        .Key {
+            user-select: none;
+            font-weight: 00;
+            width: 48px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            .Letter {
+                padding-bottom: 12px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:is(.Key-pressed) {
+                background: #cccccc;
+            }
+        }
+
+        .Key-default:not(:last-child) {
+            border-right: 2px solid black;
+        }
+
+        .Key-upper {
+            box-shadow: 0 0 0 1.5px black;
+            color: white;
+            width: 26px;
+            height: 120px;
+            border-radius: 0 0 6px 6px;
+            position: absolute;
+            background: black;
+
+            .Letter {
+                padding-bottom: 16px;
+            }
+
+            &:is(.Key-pressed) {
+                background: gray;
+            }
+        }
+
+        .Key-upper {
+
+            &:nth-child(2) {
+                left: calc(48px * 0 + 34px);
+            }
+
+            &:nth-child(4) {
+                left: calc(48px * 1 + 34px);
+            }
+
+            &:nth-child(7) {
+                left: calc(48px * 3 + 34px);
+            }
+
+            &:nth-child(9) {
+                left: calc(48px * 4 + 35px);
+            }
+
+            &:nth-child(11) {
+                left: calc(48px * 5 + 35px);
+            }
+
+            &:nth-child(14) {
+                left: calc(48px * 7 + 35px);
+            }
+
+            &:nth-child(16) {
+                left: calc(48px * 8 + 35px);
+            }
+
+            &:nth-child(19) {
+                left: calc(48px * 10 + 35px);
+            }
+
+            &:nth-child(23) {
+                left: calc(48px * 11 + 35px);
+            }
+
+            &:nth-child(21) {
+                left: calc(48px * 12 + 35px);
+            }
+        }
+    }
+
+    .Buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .Button {
+            margin: 0 6px;
+            background-color: #2d81e0;
+            padding: 0 12px;
+            border-radius: 6px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color .5s;
+
+            &:hover {
+                background-color: #2d7cd6;
+            }
+
+            &:is(.Button-destructive) {
+                background-color: red;
+            }
+
+            &:is(.Button-destructive):hover {
+                background-color: #e40404;
+            }
+        }
+    }
+}

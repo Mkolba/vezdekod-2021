@@ -1,0 +1,121 @@
+.PianoRoll__Wrapper {
+    overflow: hidden;
+    width: calc(48px * 14 + 4px);
+    height: 200px;
+
+    .PianoRoll {
+        position: relative;
+        height: 100%;
+
+        .Note {
+            width: 44px;
+            position: absolute;
+            background: violet;
+            border-radius: 6px;
+
+            &:is(.Note-upper) {
+                width: 24px;
+            }
+
+            &:is(.C3) {
+                left: 0
+            }
+
+            &:is(.Db3) {
+                left: calc(48px + 38px);
+            }
+
+            &:is(.D3) {
+                left: calc(48px + 4px);
+            }
+
+            &:is(.Eb3) {
+                left: calc(48px*2 + 38px);
+            }
+
+            &:is(.E3) {
+                left: calc(48px*2 + 4px);
+            }
+
+            &:is(.F3) {
+                left: calc(48px*3 + 4px);
+            }
+
+            &:is(.Gb3) {
+                left: calc(48px*3 + 38px);
+            }
+
+            &:is(.G3) {
+                left: calc(48px*4 + 4px);
+            }
+
+            &:is(.Ab3) {
+                left: calc(48px*4 + 38px);
+            }
+
+            &:is(.A3) {
+                left: calc(48px*5 + 4px);
+            }
+
+            &:is(.Bb3) {
+                left: calc(48px*5 + 38px);
+            }
+
+            &:is(.B3) {
+                left: calc(48px*6 + 4px);
+            }
+
+            &:is(.C4) {
+                left: calc(48px*7 + 4px);
+            }
+
+            &:is(.Db4) {
+                left: calc(48px*7 + 38px);
+            }
+
+            &:is(.D4) {
+                left: calc(48px*8 + 4px);
+            }
+
+            &:is(.Eb4) {
+                left: calc(48px*8 + 38px);
+            }
+
+            &:is(.E4) {
+                left: calc(48px*9 + 4px);
+            }
+
+            &:is(.F4) {
+                left: calc(48px*10 + 4px);
+            }
+
+            &:is(.Gb4) {
+                left: calc(48px*10 + 38px);
+            }
+
+            &:is(.G4) {
+                left: calc(48px*11 + 4px);
+            }
+
+            &:is(.Ab4) {
+                left: calc(48px*11 + 38px);
+            }
+
+            &:is(.A4) {
+                left: calc(48px*12 + 4px);
+            }
+
+            &:is(.Bb4) {
+                left: calc(48px*12 + 38px);
+            }
+
+            &:is(.B4) {
+                left: calc(48px*13 + 4px);
+            }
+        }
+
+        .Note {
+
+        }
+    }
+}
